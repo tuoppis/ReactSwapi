@@ -16,16 +16,21 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  width: minmax(600px, 80%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+select {
+  min-width: 50px;
 }
 
 @keyframes App-logo-spin {
