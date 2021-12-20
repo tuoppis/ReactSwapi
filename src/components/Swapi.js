@@ -1,5 +1,6 @@
 class Swapi {
-    constructor() {
+    constructor(url) {
+        this.url = url || "https://swapi.dev/api/";
         this.promise = this.loadAll();
     }
 
@@ -19,7 +20,7 @@ class Swapi {
 
     async loadAll() {
         try {
-            let response = await fetch("https://swapi.dev/api/");
+            let response = await fetch(this.url);
             if (!response.ok) throw new Error(response.statusText);
             let props = await response.json();
             let promiseArray = [];
@@ -39,14 +40,13 @@ class Swapi {
             this.replaceWithObjRef(this);
             return true;
         } catch(err) {
-            throw new Error("Could not load swapi: " + err);
+            throw new Error(`(${this.url}) Could not load swapi: ${err}`);
         }
     }
 
     findReplaceHTML(maybeUrl) {
-        const apiLoc = "https://swapi.dev/api/";
-        if (!maybeUrl.startsWith(apiLoc)) return maybeUrl;
-        let M = maybeUrl.slice(apiLoc.length).match(/(.+)\/(\d+)\/$/);
+        if (!maybeUrl.startsWith(this.url)) return maybeUrl;
+        let M = maybeUrl.slice(this.url.length).match(/(.+)\/(\d+)\//);
         if (M === null) return maybeUrl; // could not match
         let [_, prop, idx] = M, arr = this[prop];
         if (!Array.isArray(arr) || idx > arr.length) return maybeUrl;
@@ -59,10 +59,10 @@ class Swapi {
         if (Array.isArray(obj)) {
             for (let idx in obj) {
                 let o = obj[idx];
-                if (typeof o === "string") obj[idx] = this.replaceWithObjRef(o);
+                if (typeof o === "string") obj[idx] = this.findReplaceHTML(o);
                 else this.replaceWithObjRef(o);
             }
-        } else if (obj && obj.constructor === Object) {
+        } else {//if (obj && (obj.constructor === Object)) {
             for (let prop in obj) {
                 let o = obj[prop];
                 if (!o || prop === "url") continue;

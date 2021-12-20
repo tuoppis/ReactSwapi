@@ -18,10 +18,9 @@ function App() {
       try {
         let swapi = new Swapi();
         await swapi.promise;
-        setSwapi(swapi);
         setApiLoaded(true);
+        setSwapi(swapi);
       } catch (err) {
-        //setSwapi({});
         setTryAgain(true);
         window.alert(err);
       }
