@@ -1,5 +1,5 @@
 {
-  "name": "js-fetch-harjoitus-1",
+  "name": "ReactSwapi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "bootstrap": "^5.1.3",
+    "gh-pages": "^3.2.3",
     "react-bootstrap": "^2.0.3"
   }
 }
