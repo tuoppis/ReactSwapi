@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ReactSwapi/static/css/main.8c198ad2.chunk.css",
+    "main.js": "/ReactSwapi/static/js/main.0b050340.chunk.js",
+    "main.js.map": "/ReactSwapi/static/js/main.0b050340.chunk.js.map",
+    "runtime-main.js": "/ReactSwapi/static/js/runtime-main.0cf00f17.js",
+    "runtime-main.js.map": "/ReactSwapi/static/js/runtime-main.0cf00f17.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/ReactSwapi/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.0765dd69.chunk.js": "/ReactSwapi/static/js/2.0765dd69.chunk.js",
+    "static/js/2.0765dd69.chunk.js.map": "/ReactSwapi/static/js/2.0765dd69.chunk.js.map",
+    "static/js/3.b520fbc8.chunk.js": "/ReactSwapi/static/js/3.b520fbc8.chunk.js",
+    "static/js/3.b520fbc8.chunk.js.map": "/ReactSwapi/static/js/3.b520fbc8.chunk.js.map",
+    "index.html": "/ReactSwapi/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/ReactSwapi/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.8c198ad2.chunk.css.map": "/ReactSwapi/static/css/main.8c198ad2.chunk.css.map",
+    "static/js/2.0765dd69.chunk.js.LICENSE.txt": "/ReactSwapi/static/js/2.0765dd69.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cf00f17.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.0765dd69.chunk.js",
+    "static/css/main.8c198ad2.chunk.css",
+    "static/js/main.0b050340.chunk.js"
+  ]
+}
